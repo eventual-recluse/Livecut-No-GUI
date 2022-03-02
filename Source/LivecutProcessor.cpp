@@ -18,7 +18,6 @@
  */
 
 #include "LivecutProcessor.h"
-#include "LivecutEditor.h"
 #include "Functor.h"
 
 using std::mem_fun;
@@ -438,56 +437,12 @@ void LivecutAudioProcessor::Process(float **inputs,float **outputs, const long s
 
 bool LivecutAudioProcessor::hasEditor() const
 {
-  return true; // (change this to false if you choose to not supply an editor)
+  return false; // (change this to false if you choose to not supply an editor)
 }
 
 AudioProcessorEditor* LivecutAudioProcessor::createEditor()
 {
-  /*
-  AutoParam  crusherswitch;
-  PowerParam fade;
-	AutoParam	combmindelay, combmaxdelay, combfeedback, combswitch, sqpampswitch;
-  EnumParam strategy, combtype;
-   */
-  
-  LivecutAudioProcessorEditor *pEditor = new LivecutAudioProcessorEditor (this);
-  pEditor->addKnob(minphraselength.GetTag(), 2, 0);
-  pEditor->addKnob(maxphraselength.GetTag(), 2, 2);
-  pEditor->addKnob(subdiv.GetTag(), 2, 4);
-  pEditor->addKnob(seed.GetTag(), 2, 6);
-
-  pEditor->addKnob(stutterchance.GetTag(), 7, 0);
-  pEditor->addKnob(stutterarea.GetTag(), 7, 2);
-  pEditor->addKnob(minrepeats.GetTag(), 7, 4);
-  pEditor->addKnob(maxrepeats.GetTag(), 7, 6);
-  
-  pEditor->addKnob(straightchance.GetTag(), 7, 8);
-  pEditor->addKnob(regularchance.GetTag(), 7, 10);
-  pEditor->addKnob(ritardchance.GetTag(), 7, 12);
-  pEditor->addKnob(accel.GetTag(), 7, 14);
-
-  pEditor->addKnob(activity.GetTag(), 7, 16);
-
-  pEditor->addKnob(minamp.GetTag(), 12, 0);
-  pEditor->addKnob(maxamp.GetTag(), 12, 2);
-  pEditor->addKnob(minpan.GetTag(), 12, 4);
-  pEditor->addKnob(maxpan.GetTag(), 12, 6);
-
-  pEditor->addKnob(mindetune.GetTag(), 2, 8);
-  pEditor->addKnob(maxdetune.GetTag(), 2, 10);
-
-  pEditor->addKnob(dutycycle.GetTag(), 2, 16);
-  pEditor->addKnob(filldutycycle.GetTag(), 2, 18);
-  pEditor->addKnob(fade.GetTag(), 2, 20);
-
-  pEditor->addKnob(minbits.GetTag(), 12, 8);
-  pEditor->addKnob(maxbits.GetTag(), 12, 10);
-  pEditor->addKnob(minfreq.GetTag(), 12, 12);
-  pEditor->addKnob(maxfreq.GetTag(), 12, 14);
-  pEditor->addKnob(crusherswitch.GetTag(), 16, 2);
-
-  
-  return pEditor;
+  return nullptr;
 }
 
 
