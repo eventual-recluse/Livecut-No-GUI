@@ -11,4 +11,4 @@ It is a live beat-slicer but instead of manipulating equal chunks of audio like 
 *Cuts* are organized in *blocks* which then form a *phrase*. see Image below. And each phrase can be ended by a *roll* or *fill*.
 
 -------
-This is a version of LiveCut with no GUI. To use it, you'll need a plugin host which can provide generic controls.
+This is a version of LiveCut with no GUI. To use it, you'll need a plugin host which can provide generic controls. With some plugin formats, plugin parameters may not be saved by plugin hosts.
